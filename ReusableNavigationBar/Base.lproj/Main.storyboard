@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,43 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReusableNavigationBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YtO-Pc-NLe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="159"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YQG-Pr-NhU" customClass="NavbarSuperView" customModule="ReusableNavigationBar" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="159"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="YQG-Pr-NhU" firstAttribute="top" secondItem="YtO-Pc-NLe" secondAttribute="top" id="H9S-uc-gbe"/>
+                                    <constraint firstAttribute="height" constant="159" placeholder="YES" id="XY4-me-lE0"/>
+                                    <constraint firstAttribute="bottom" secondItem="YQG-Pr-NhU" secondAttribute="bottom" id="cYk-J7-pax"/>
+                                    <constraint firstItem="YQG-Pr-NhU" firstAttribute="leading" secondItem="YtO-Pc-NLe" secondAttribute="leading" id="mC9-fy-vof"/>
+                                    <constraint firstAttribute="trailing" secondItem="YQG-Pr-NhU" secondAttribute="trailing" id="yxT-yT-fbe"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YtO-Pc-NLe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GOI-Q2-eD1"/>
+                            <constraint firstItem="YtO-Pc-NLe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="awz-A9-FzG"/>
+                            <constraint firstItem="YtO-Pc-NLe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lWv-XN-hoj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="customNavbarView" destination="YQG-Pr-NhU" id="xj2-h7-O8P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
         </scene>
     </scenes>
 </document>

@@ -14,6 +14,8 @@
 		7F40F95D21FC9D3C005F4210 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F40F95B21FC9D3C005F4210 /* LaunchScreen.storyboard */; };
 		7F40F96821FC9D3C005F4210 /* ReusableNavigationBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F40F96721FC9D3C005F4210 /* ReusableNavigationBarTests.swift */; };
 		7F40F97321FC9D3C005F4210 /* ReusableNavigationBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F40F97221FC9D3C005F4210 /* ReusableNavigationBarUITests.swift */; };
+		7F40F98821FC9F0E005F4210 /* NavbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F40F98621FC9F0E005F4210 /* NavbarView.swift */; };
+		7F40F98921FC9F0E005F4210 /* NavbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F40F98721FC9F0E005F4210 /* NavbarView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		7F40F96E21FC9D3C005F4210 /* ReusableNavigationBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReusableNavigationBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F40F97221FC9D3C005F4210 /* ReusableNavigationBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableNavigationBarUITests.swift; sourceTree = "<group>"; };
 		7F40F97421FC9D3C005F4210 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F40F98621FC9F0E005F4210 /* NavbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavbarView.swift; sourceTree = "<group>"; };
+		7F40F98721FC9F0E005F4210 /* NavbarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavbarView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		7F40F95121FC9D38005F4210 /* ReusableNavigationBar */ = {
 			isa = PBXGroup;
 			children = (
+				7F40F98A21FCA01E005F4210 /* Navbar */,
 				7F40F95221FC9D38005F4210 /* AppDelegate.swift */,
 				7F40F95421FC9D38005F4210 /* ViewController.swift */,
 				7F40F95621FC9D38005F4210 /* Main.storyboard */,
@@ -123,6 +128,16 @@
 				7F40F97421FC9D3C005F4210 /* Info.plist */,
 			);
 			path = ReusableNavigationBarUITests;
+			sourceTree = "<group>";
+		};
+		7F40F98A21FCA01E005F4210 /* Navbar */ = {
+			isa = PBXGroup;
+			children = (
+				7F40F98621FC9F0E005F4210 /* NavbarView.swift */,
+				7F40F98721FC9F0E005F4210 /* NavbarView.xib */,
+			);
+			name = Navbar;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F40F98921FC9F0E005F4210 /* NavbarView.xib in Resources */,
 				7F40F95D21FC9D3C005F4210 /* LaunchScreen.storyboard in Resources */,
 				7F40F95A21FC9D3C005F4210 /* Assets.xcassets in Resources */,
 				7F40F95821FC9D38005F4210 /* Main.storyboard in Resources */,
@@ -258,6 +274,7 @@
 			files = (
 				7F40F95521FC9D38005F4210 /* ViewController.swift in Sources */,
 				7F40F95321FC9D38005F4210 /* AppDelegate.swift in Sources */,
+				7F40F98821FC9F0E005F4210 /* NavbarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J53NLM32CH;
 				INFOPLIST_FILE = ReusableNavigationBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J53NLM32CH;
 				INFOPLIST_FILE = ReusableNavigationBar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
